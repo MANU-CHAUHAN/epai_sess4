@@ -171,8 +171,8 @@ def test_sqrt():
 
 def test_eq():
     sum = 0
+    any = random.choice([1, 0, -1, 1.0, -1.0])
     for i in range(1000000):
-        any = random.choice([1, 0, -1, 1.0, 1.000, 0.0, -1.0000])
         q = session4.Qualean(any)
         sum = sum + q.value
     assert sum.__eq__(0) == math.isclose(sum, 0)
